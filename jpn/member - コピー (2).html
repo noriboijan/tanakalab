@@ -20,7 +20,7 @@
         var cap = false;
         $(csv).each(function(){
           if(!cap){
-            list += '<thead ><tr><th class="text-center">'+this[0]+'</th><th class="text-center">'+this[1]+'</th></tr></thead><tbody>';
+            list += '<thead><tr><th>'+this[0]+'</th><th>'+this[1]+'</th></tr></thead><tbody>';
             cap = true;
           }else if(!this[0]){
             list += '</p>'+this[1]
@@ -29,14 +29,11 @@
               list += '</td></tr>';
               cont = false;
             }
-            list += '<tr><td class="text-center">'+this[0]+'</td><td  class="text-center">'+this[1];
+            list += '<tr><td>'+this[0]+'</td><td>'+this[1];
             cont = true;
           }
             if(this[3]){
               list += ' <a href="'+this[3]+'"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>';
-            }
-            else{
-              list += '<span>　</span>';
             }
         })
         list += '</td></tr></tbody>';
@@ -46,8 +43,8 @@
     </script>
   </head>
   <body>
-    <div class="container">
-      <div class="col-xs-8 col-xs-offset-2 text-center">
+    <div class="container-fluid">
+      <div class="col-xs-10 col-xs-offset-1 text-center">
         <h1 class="page-header">田中研究室在籍者リスト</h1>
       </div>
       <div class="col-xs-6 col-xs-offset-3">
