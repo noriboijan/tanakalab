@@ -20,6 +20,9 @@ $(document).ready(function(){
       else if(file == 'research.html'){
         $("#navbar li.research").addClass("active");
       }
+      else if(file == 'thesis.html'){
+        $("#navbar li.thesis").addClass("active");
+      }
       else if(file == 'access.html'){
         $("#navbar li.access").addClass("active");
       }
