@@ -14,7 +14,7 @@ $(function(){
         if(init){
           init = false;
         }else{
-          list += '</div></div>'; // <div class="panel-body"><div class="panel">
+          list += '</table></div>'; // <div class="panel-body"><div class="panel">
         }
         first = true;
         list += '<div class="panel panel-primary">';
@@ -25,26 +25,29 @@ $(function(){
           first = false;
         }
         else{
-          list += '</div>'; // <div class="panel-body">
+          list += '</table>'; // <div class="panel-body">
         }
-        list += '<ul class="list-group"><li class="list-group-item well well-sm">'+this[jpPosit]+'</li></ul>';
-        list += '<div class="panel-body">';
+        list += '<ul class="list-group"><li class="list-group-item list-group-item-warning">'+this[jpPosit]+'</li></ul>';
+        list += '<table class="table">';
       }
       else{
-        list += '<div class="row"><div class="col-xs-12">';
-        list += '<div class="col-xs-11">'+this[jpName];
+        list += '<tr><td width="220" class="text-center">';
+        list += this[jpName];
         if(this[jpAff]){
-          list += '（'+this[jpAff]+'）';
+          list += '<td width="500">'+this[jpAff]+'</td>';
+        }else{
+          list += '<td width="500">　</td>';
         }
-        list += '</div>'; // <div class="col-xs-11">
-        list += '<div class="col-xs-1 text-center">';
-        if(this[3]){
-          list += '<a href="'+this[hasHp]+'"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>';
+        if(this[hasHp]){
+          list += '<td><a href="'+this[hasHp]+'">Homepage</a></td>';
+        }else{
+          list += '<td>　</td>';
         }
-        list += '</div></div></div>'; // <div class="col-xs-1 text-center"><div class="col-xs-12"><div class="row">
+
+        list += '</td></tr>'; // <div class="col-xs-12 or 4"><div class="row">
       }
     })
-    list += '</div></div>'; // <div class="panel-body"><div class="panel">
+    list += '</table></div>'; // <div class="panel-body"><div class="panel">
     $('#current-members').prepend(list);
   })
 })

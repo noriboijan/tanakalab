@@ -16,7 +16,7 @@ $(function(){
         if(init){
           init = false;
         }else{
-          list += '</div></div>'; // <div class="panel-body"><div class="panel">
+          list += '</table></div>'; // <div class="panel-body"><div class="panel">
         }
         first = true;
         list += '<h1><span id='+this[year]+'></span></h1>';
@@ -27,21 +27,29 @@ $(function(){
         if(first){
           first = false;
         }else{
-          list += '</div>'; // <div class="panel-body">
+          list += '</table>'; // <div class="panel-body">
         }
-        list += '<ul class="list-group"><li class="list-group-item well well-sm">'+this[jpPosit]+'</li></ul>';
-        list += '<div class="panel-body">';
+        list += '<ul class="list-group"><li class="list-group-item list-group-item-warning">'+this[jpPosit]+'</li></ul>';
+        list += '<table class="table table-hover table-bordered">';
       }
       else{
-        list += '<div class="row"><div class="col-xs-12">';
-        list += '<div class="col-xs-4">'+this[enName]+'</div>';
-        list += '<div class="col-xs-8">';
-        list += this[jpTitle];
-        list += this[enTitle];
-        list += '</div></div></div>'; // <div class="panel-body"><div class="panel"><div class="row">
+        list += '<tr><td width="170" class="text-center">';
+        if(this[jpName].match(/\S/g)){
+          list += this[jpName];
+        }else{
+          list += this[enName];
+        }
+        list += '</td>';
+        list += '<td>';
+        if(this[jpTitle].match(/\S/g)){
+          list += this[jpTitle];
+        }else{
+          list += this[enTitle];
+        }
+        list += '</td></tr>';
       }
     })
-    list += '</div></div>'; // <div class="panel-body"><div class="panel">
+    list += '</table></div>'; // <div class="panel-body"><div class="panel">
     $('#graduates').prepend(list);
   })
 })
