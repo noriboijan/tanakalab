@@ -1,3 +1,2 @@
-# tanakalab
-201503 tanakalab renewal
-using Bootstrap 3
+# Tanaka laboratory web page.
+ホームページリニューアル using Bootstrap 3
