@@ -4,68 +4,43 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TANAKA Lab. - Department of Communications and Computer Engineering - Waseda University</title>
+    <title>Member - TANAKA Lab. - Waseda University</title>
     <script src="/js/import.js"></script>
+    <script type="text/javascript" src="/js/jquery.csv.js"></script>
+    <script type="text/javascript" src="/js/graduates.js"></script>
+    <style>
+      .affix{
+        position:fixed;
+        top:70px;
+      }
+      h1 > span {
+        position: relative;
+        top: -70px;
+        display: block;
+      }
+    </style>
     <!--[if lte IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
     <![endif]-->
-    <style>
-      p.resizeimage {
-      max-width: 100px; /* 最大幅 */
-      min-width: 100px; /* 最小幅 */
-      }
-      p.resizeimage img { width: 100%; }
-    </style>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#sidebar">
     <div class="container">
-      <div class="text-center">
-        <h1 class="page-header">研究概要</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-        <div class="panel panel-primary">
-          <div class="panel-heading text-center">
-            <div class="panel-title">Optical</div>
-          </div>
-          <div class="panel-body">
-            <div class="col-xs-12 col-sm-6">
-              内容
-            </div>
-            <div class="col-xs-12 col-sm-6">
-              <img src="/img/test-image.png" alt="Optical" class="img-responsive img-responsive-overwrite">
-            </div>
+      <h1 class="page-header text-center">論文</h1>
+      <div class="row">
+        <div class="col-xs-12 col-sm-9"><div id="graduates"></div>
+          <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+        <div class="col-sm-3 hidden-xs">
+          <div id="sidebar" data-spy="affix" data-offset-top="120" data-offset-bottom="0">
+            <ul class = "nav nav-pills nav-stacked hidden-xs">
+              <li><a class="2014" href="#2014">2014年度</a></li>
+              <li><a class="2013" href="#2013">2013年度</a></li>
+              <li><a class="2012" href="#2012">2012年度</a></li>
+            </ul>
           </div>
         </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading text-center">
-            <div class="panel-title">Economics</div>
-          </div>
-          <div class="panel-body">
-            <div class="col-xs-12 col-sm-6">
-              内容
-            </div>
-            <div class="col-xs-12 col-sm-6">
-              <img src="/img/test-image.png" alt="Economics" class="img-responsive img-responsive-overwrite">
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading text-center">
-            <div class="panel-title">Wireless</div>
-          </div>
-          <div class="panel-body">
-            <div class="col-xs-12 col-sm-6">
-              内容
-            </div>
-            <div class="col-xs-12 col-sm-6">
-              <img src="/img/test-image.png"  alt="wireless" class="img-responsive img-responsive-overwrite">
-            </div>
-          </div>
-        </div>
-      </div>
+       </div>
     </div>
   </body>
 </html>
