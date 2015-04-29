@@ -32,6 +32,7 @@ $(function(){
       }
       else{
         list += '<tr><td width="220" class="text-center">';
+        console.log(this[jpName]);
         list += this[jpName];
         if(this[jpAff]){
           list += '<td width="500">'+this[jpAff]+'</td>';
