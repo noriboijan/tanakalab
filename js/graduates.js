@@ -34,14 +34,18 @@ $(function(){
       }
       else{
         list += '<tr><td width="170" class="text-center">';
-        if(this[jpName].match(/\S/g)){
+//        if(this[jpName].match(/\S/g)){
+        if(!this[jpName] == ""){
           list += this[jpName];
         }else{
           list += this[enName];
         }
         list += '</td>';
-        list += '<td>';
-        if(this[jpTitle].match(/\S/g)){
+        list += '<td width="500">';
+//        if(this[jpTitle].match(/\S/g)){
+        if(!this[jpTitle] == "" && !this[enTitle] == ""){
+          list += this[jpTitle] + '</br>' + this[enTitle];
+        }else if(!this[jpTitle] == ""){
           list += this[jpTitle];
         }else{
           list += this[enTitle];

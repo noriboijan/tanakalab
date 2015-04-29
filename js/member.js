@@ -39,7 +39,7 @@ $(function(){
           list += '<td width="500">　</td>';
         }
         if(this[hasHp]){
-          list += '<td><a href="'+this[hasHp]+'">Homepage</a></td>';
+          list += '<td><a href="'+this[hasHp]+'" class="btn btn-default btn-xs">Homepage</a></td>';
         }else{
           list += '<td>　</td>';
         }
