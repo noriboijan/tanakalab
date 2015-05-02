@@ -12,7 +12,9 @@ $(function(){
         var $dir = location.href.split("/");
     var $dir2 = $dir[$dir.length -2];
     var lang = 0;
+    var Posit = jpPosit;
     if($dir2 == 'eng'){
+      Posit = enPosit;
       lang = 1;
     }
 
@@ -37,7 +39,7 @@ $(function(){
         }else{
           list += '</table>'; // <div class="panel-body">
         }
-        list += '<ul class="list-group"><li class="list-group-item list-group-item-warning">'+this[jpPosit]+'</li></ul>';
+        list += '<ul class="list-group"><li class="list-group-item list-group-item-warning">'+this[Posit]+'</li></ul>';
         list += '<table class="table table-hover table-bordered table-condensed">';
       }
       else{
