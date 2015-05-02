@@ -1,0 +1,6 @@
+header.jumbotron{
+  background: url("/img/header-test.jpg");
+  background-position: center center;
+  background-size: cover;
+  color: #fff;
+}

@@ -1,13 +1,21 @@
 $(function(){
-  $.get('graduates.csv',function(data){
+  $.get('/data/graduates.csv',function(data){
     var csv = $.csv()(data);
     const punc = 0;
     const jpName = 0;
     const enName = 1;
     const year = 1;
     const jpPosit = 1;
+    const enPosit = 2;
     const enTitle = 2;
     const jpTitle = 3;
+        var $dir = location.href.split("/");
+    var $dir2 = $dir[$dir.length -2];
+    var lang = 0;
+    if($dir2 == 'eng'){
+      lang = 1;
+    }
+
     var list = "";
     var init = true;
     var first = true;
@@ -34,18 +42,18 @@ $(function(){
       }
       else{
         list += '<tr><td width="170" class="text-center">';
-//        if(this[jpName].match(/\S/g)){
-        if(!this[jpName] == ""){
+        if(!this[jpName] == "" && lang == 0){
           list += this[jpName];
         }else{
           list += this[enName];
         }
         list += '</td>';
         list += '<td width="500">';
-//        if(this[jpTitle].match(/\S/g)){
-        if(!this[jpTitle] == "" && !this[enTitle] == ""){
+        if(!this[jpTitle] == "" && !this[enTitle] == ""  && lang == 0){
           list += this[jpTitle] + '</br>' + this[enTitle];
-        }else if(!this[jpTitle] == ""){
+        }else if(!this[jpTitle] == ""   && lang == 0){
+          list += this[jpTitle];
+        }else if(!this[enTitle]){
           list += this[jpTitle];
         }else{
           list += this[enTitle];

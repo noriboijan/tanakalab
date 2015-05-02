@@ -1,11 +1,28 @@
 $(function(){
-  $.get('member.csv',function(data){
+  $.get('/data/member.csv',function(data){
     var csv = $.csv()(data);
     const punc = 0;
     const jpName = 0;
+    const enName = 1;
     const jpPosit = 1;
+    const enPosit = 2;
     const hasHp = 3;
     const jpAff = 4;
+    const enAff =5;
+    var Posit = 0;
+    var Name = 0;
+    var Aff = 0;
+    var $dir = location.href.split("/");
+    var $dir2 = $dir[$dir.length -2];
+    if($dir2 == 'jpn'){
+      Name = jpName;
+      Posit = jpPosit;
+      Aff = jpAff;
+    }else{
+      Name = enName;
+      Posit = enPosit;
+      Aff = enAff;
+    }
     var list = "";
     var init = true;
     var first = true;
@@ -18,7 +35,7 @@ $(function(){
         }
         first = true;
         list += '<div class="panel panel-primary">';
-        list += '<div class="panel-heading"><h3 class="panel-title">' +this[jpPosit]+ '</h3></div>';
+        list += '<div class="panel-heading"><h3 class="panel-title">' +this[Posit]+ '</h3></div>';
       }
       else if(this[punc] == "+"){
         if(first){
@@ -27,14 +44,14 @@ $(function(){
         else{
           list += '</table>'; // <div class="panel-body">
         }
-        list += '<ul class="list-group"><li class="list-group-item list-group-item-warning">'+this[jpPosit]+'</li></ul>';
+        list += '<ul class="list-group"><li class="list-group-item list-group-item-warning">'+this[Posit]+'</li></ul>';
         list += '<table class="table table-condensed">';
       }
       else{
         list += '<tr><td width="220" class="text-center">';
-        list += this[jpName];
-        if(this[jpAff]){
-          list += '<td width="500">'+this[jpAff]+'</td>';
+        list += this[Name];
+        if(this[Aff]){
+          list += '<td width="500">'+this[Aff]+'</td>';
         }else{
           list += '<td width="500">　</td>';
         }
