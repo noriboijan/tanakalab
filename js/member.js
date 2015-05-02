@@ -28,7 +28,7 @@ $(function(){
           list += '</table>'; // <div class="panel-body">
         }
         list += '<ul class="list-group"><li class="list-group-item list-group-item-warning">'+this[jpPosit]+'</li></ul>';
-        list += '<table class="table">';
+        list += '<table class="table table-condensed">';
       }
       else{
         list += '<tr><td width="220" class="text-center">';

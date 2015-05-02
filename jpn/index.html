@@ -19,6 +19,26 @@
         background-size: cover;
         color: #fff;
       }
+      .map_wrapper {
+        max-width: 640px;
+        min-width: 280px;
+        margin: 20px auto;
+        padding: 4px;
+        border: 1px solid #CCC;
+      }
+      .googlemap {
+          position: relative;
+          padding-bottom: 56.25%;
+          height: 0;
+          overflow: hidden;
+      }
+      .googlemap iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100% !important;
+          height: 100% !important;
+      }
     </style>
   </head>
   <body>
@@ -31,13 +51,12 @@
     <div class="container">
       <div class="row">
         <div class="col-xs-12 col-sm-9">
+            <p class="lead text-center">当研究室では　<u><strong>Economics</strong></u>，<u><strong>Wireless</strong></u>，<u><strong>Optical</strong></u>　の研究を行っております
+            <a href="/jpn/research.html" class="btn btn-default btn-sm">詳細</a></p>
           <div class="panel panel-danger">
-            <div class="panel-heading">
-              <div class="panel-title">入学・進学・卒論希望の方へ</div>
-            </div>
             <div class="panel-body">
-              <p>大学院国際情報通信研究科は，再編により2014年4月から基幹理工学研究科の一部になりました．当研究室希望の方は，基幹理工学研究科情報理工・情報通信専攻に御入学下さい．</p>
-              <p>入学方法は，<a href="http://www.sci.waseda.ac.jp/">理工学術院</a>のホームページを御覧下さい．</p>
+            <p class="lead text-danger">入学・進学・卒論希望の方へ</p>
+              <p>大学院国際情報通信研究科は，再編により2014年4月から基幹理工学研究科の一部になりました．当研究室希望の方は，基幹理工学研究科情報理工・情報通信専攻に御入学下さい．入学方法は，<a href="http://www.sci.waseda.ac.jp/">理工学術院</a>のホームページを御覧下さい．</p>
               <p>基幹理工学部情報理工学科の学生は，当研究室で卒業論文の研究を行うことができます．</p>
             </div>
           </div>
@@ -47,20 +66,25 @@
             </div>
             <div class="panel-body">
               <div id="news_text"></div>
-              <a href="http://www.tanaka.giti.waseda.ac.jp/~tanaka/news.html"><p class="text-right"><button type="button" class="btn btn-primary btn-sm">詳細...</button></p></a>
+              <p class="text-right"><a href="http://www.tanaka.giti.waseda.ac.jp/~tanaka/news.html" class="btn btn-primary btn-sm">過去のお知らせ</a></p>
             </div>
           </div>
-          <div class="panel panel-primary">
+          <div class="panel panel-default">
             <div class="panel-heading">
-              <div class="panel-title">セミナースケジュール</div>
+              <div class="panel-title">研究室所在地・連絡先（早稲田大学　西早稲田キャンパス）</div>
             </div>
             <div class="panel-body">
+              <div class="map_wrapper">
+                <div class="googlemap">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6479.634994747598!2d139.70665933862304!3d35.706108439795216!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9735f1b32fda1b6d!2z5pep56iy55Sw5aSn5a2mIOeQhuW3peWtpuihk-mZog!5e0!3m2!1sja!2sjp!4v1430386018658" width="400" height="300" frameborder="0" style="border:0"></iframe>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="panel panel-primary">
-            <div class="panel-heading"><div class="panel-title">発表文献</div></div>
-            <div class="panel-body">
-            </div>
+            <table class="table table-hover">
+              <tr><td>住所</td><td>〒169-8555 東京都新宿区大久保3-4-1　早大61号館513，515号室</td>
+              <tr><td>電話</td><td>(03)5286-1625</td>
+              <tr><td>交通</td><td>地下鉄副都心線西早稲田駅下車，駅直結</td></tr>
+            </table>
           </div>
         </div>
         <div class="col-xs-12 col-sm-3">
