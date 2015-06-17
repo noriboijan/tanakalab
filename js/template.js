@@ -11,8 +11,11 @@ $(document).ready(function(){
       var $dir2 = $dir[$dir.length -2];
       if($dir2 == 'jpn'){
         $("#navbar li.jpn").addClass("active");
-      }else{
+      }else if($dir2 == 'eng'){
         $("#navbar li.eng").addClass("active");
+      }
+      else{
+        $("#navbar li.jpn").addClass("active");
       }
       if(file ==  'index.html'){
         $("#navbar li.home").addClass("active");
