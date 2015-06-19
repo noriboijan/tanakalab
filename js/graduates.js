@@ -1,15 +1,23 @@
 $(function(){
   $.get('/data/graduates.csv',function(data){
     var csv = $.csv()(data);
-    const punc = 0;
-    const jpName = 0;
-    const enName = 1;
-    const year = 1;
-    const jpPosit = 1;
-    const enPosit = 2;
-    const enTitle = 2;
-    const jpTitle = 3;
-        var $dir = location.href.split("/");
+    var punc = 0;
+    var jpName = 0;
+    var enName = 1;
+    var year = 1;
+    var jpPosit = 1;
+    var enPosit = 2;
+    var enTitle = 2;
+    var jpTitle = 3;
+//    const punc = 0;
+//    const jpName = 0;
+//    const enName = 1;
+//    const year = 1;
+//    const jpPosit = 1;
+//    const enPosit = 2;
+//    const enTitle = 2;
+//    const jpTitle = 3;
+    var $dir = location.href.split("/");
     var $dir2 = $dir[$dir.length -2];
     var lang = 0;
     var Posit = jpPosit;
