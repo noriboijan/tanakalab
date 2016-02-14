@@ -6,66 +6,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TANAKA Lab. - Department of Communications and Computer Engineering - Waseda University</title>
     <script src="/js/import.js"></script>
+    <style>
+      .affix{
+        position:fixed;
+        top:70px;
+      }
+      h1 > span {
+        position: relative;
+        top: -70px;
+        display: block;
+      }
+      p.resizeimage {
+        max-width: 320px; /* 最大幅 */
+        min-width: 320px; /* 最小幅 */
+      }
+      .img-responsive-overwrite{
+    margin: 0 auto;
+}
+      td.tanakalabname { vertical-align: middle; }
+    </style>
     <!--[if lte IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.3.0/respond.js"></script>
     <![endif]-->
-    <style>
-      p.resizeimage {
-      max-width: 100px; /* 最大幅 */
-      min-width: 100px; /* 最小幅 */
-      }
-      p.resizeimage img { width: 100%; }
-    </style>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#sidebar">
     <div class="container">
-      <div class="text-center">
-        <h1 class="page-header">研究概要</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-12 col-sm-6 col-sm-offset-3">
-        <div class="panel panel-primary">
-          <div class="panel-heading text-center">
-            <div class="panel-title">Optical</div>
-          </div>
-          <div class="panel-body">
-            <div class="col-xs-12 col-sm-6">
-              内容
-            </div>
-            <div class="col-xs-12 col-sm-6">
-              <img src="/img/test-image.png" alt="Optical" class="img-responsive img-responsive-overwrite">
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading text-center">
-            <div class="panel-title">Economics</div>
-          </div>
-          <div class="panel-body">
-            <div class="col-xs-12 col-sm-6">
-              内容
-            </div>
-            <div class="col-xs-12 col-sm-6">
-              <img src="/img/test-image.png" alt="Economics" class="img-responsive img-responsive-overwrite">
-            </div>
-          </div>
-        </div>
-        <div class="panel panel-primary">
-          <div class="panel-heading text-center">
-            <div class="panel-title">Wireless</div>
-          </div>
-          <div class="panel-body">
-            <div class="col-xs-12 col-sm-6">
-              内容
-            </div>
-            <div class="col-xs-12 col-sm-6">
-              <img src="/img/test-image.png"  alt="wireless" class="img-responsive img-responsive-overwrite">
+      <div class="text-center" id="current"><h1 class="page-header">研究概要</h1></div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-9">
+          <h1><span id="economics"></span></h1><div class="panel panel-primary">
+            <div class="panel-heading text-center"><div class="panel-title"><strong>Economics team</strong></div></div>
+            <div class="panel-body">
+              <h1><span id="eco-pricing"></span></h1><div class="panel panel-danger"><div class="panel-body">
+                <p class="lead text-danger text-center"><strong>プライシング</strong></p>
+                <p>近年，スマートフォンやパソコン等の情報通信機器の普及に伴い，通信トラヒックが増加している．また，各通信事業者は，通信品質を確保するために，増加したトラヒックを処理するための設備投資が求められている．しかし，通信量は日中常に一定ではなく，トラヒックの多いピーク時間帯とトラヒックの少ないオフピーク時間帯に分けることができる．したがって，ピーク時間帯のトラヒックを処理するために設備投資をするとオフピーク時間帯で処理能力の余剰が発生し，コスト負担が増加する．つまり，ピーク時間帯とオフピーク時間帯におけるトラヒックの差を減少させることで，通信資源を効率的に利用することができると考えられる．そこで，ピーク時間帯とオフピーク時間帯のトラヒックの差を減らすために，<strong>時間依存料金（<u>TDP：Time-Dependent Pricing</u>）</strong>などといった通信料金決定法の研究が行われている．<strong>当研究室では，通信需要の分散を目的とした料金決定法の研究</strong>等を行っている．</p>
+                <img src="/img/traffic-shift.png" alt="Economics" class="img-responsive img-responsive-overwrite">
+                <h4><p class="text-center">トラヒックシフトの例</p></h4>
+              </div></div>
+              <h1><span id="eco-game-theory"></span></h1><div class="panel panel-danger"><div class="panel-body">
+                <p class="lead text-danger text-center"><strong>ゲーム理論</strong></p>
+                <p>ネットワークにおいて，通信資源は有限であるため，限られた資源を無駄なく効率的に利用するにはどのように割り当てるかが課題となる．また，通信資源を複数の利用者で共有する通信モデルでは，資源の奪い合いなどが発生し，資源の枯渇などにつながり，全体としての損失をもたらす問題が発生することがある．これらの問題に対して，経済学の分野で用いられるゲーム理論を応用することで，通信における様々な問題の解明や解決を行う研究が行われている．ゲーム理論は<strong>プレーヤ</strong>，<strong>戦略</strong>，<strong>利得</strong>，<strong>情報</strong>の4つの要素から構成され，2人以上のプレーヤの意思決定を分析する理論である．プレーヤはゲームを行う意思決定の主体，戦略はプレーヤが選択できる行動，利得はプレーヤが各戦略を選んだ時に得られる利益や便益，情報はどの戦略をとるとどのくらいの利得をになるかという情報を指す．<strong>当研究室では，通信における様々な問題をゲーム理論を用いてモデル化し，通信資源割当の最適化等を目的とした研究</strong>を行っている．</p>
+                <!-- <img src="/img/game-theory.png" alt="Economics" class="img-responsive img-responsive-overwrite">
+                <h4><p class="text-center">ゲーム理論</p></h4> -->
+              </div></div>
+              <h1><span id="eco-user-beh"></span></h1><div class="panel panel-danger"><div class="panel-body">
+                <p class="lead text-danger text-center"><strong>ユーザ行動</strong></p>
+                <p>近年，移動体通信網や公衆無線LANなどが広く普及し，これらの利用者もまた著しく増加している．例えば，駅や空港といった交通機関，喫茶店やファーストフード点などの飲食店には，様々なアクセスポイントが設置され，また非常に多くの利用者が存在する．そのため，時間，場所，サービスにより利用者の分布に大きく偏りが生じる．このような環境下では，特定のアクセスポイントへ利用者が集中し，通信の干渉や輻輳などの問題が発生する可能性があり，各ユーザが接続すべきアクセスポイントを自律的に選択することは困難であると考えられる．本研究では，交通問題などを解決するために用いられるモビリティ・マネジメントを上述した問題に応用し，<strong>ユーザの意識や行動を自発的に変化させる<u>ユーザ誘導</u>の研究</strong>を行っている．効率的なユーザ誘導を実現するためには，各ユーザの行動や環境等を考慮する必要があり，例えば，より良い通信品質を得るためならば，ユーザはどの程度の距離の移動を許容できるかといった点などが重要となる．そのため，工学的な手法のみにとらわれず，ユーザの行動や環境など様々な要因を考慮し，通信資源の効率的利用を促すための研究を行っている．</p>
+                <!--<img src="/img/wtm.png" alt="Economics" class="img-responsive img-responsive-overwrite">
+                <h4><p class="text-center">ユーザ誘導</p></h4> -->
+              </div></div>
+              <h1><span id="eco-qoe"></span></h1><div class="panel panel-danger"><div class="panel-body">
+                <p class="lead text-danger text-center"><strong>ユーザ体感品質<small>（QoE：Quality of Experience）</small></strong></p>
+                <p>固定通信網と移動体通信網の発達や，スマートフォン，タブレット，小型のノートPCといった高機能な携帯端末の普及により時間や場所を問わず通信サービスを享受することが可能となっている．これに伴い，各ユーザが利用する通信サービスは多様化しており，各ユーザ自身の環境，目的，行動もまた様々なものとなっている．従来の通信サービスでは，<strong>パケット損失や通信遅延などの客観的な品質を評価指標としたサービス品質（<u>QoS：Quality of Service</u>）</strong>に基づく通信制御が行われてきた．しかし，同一のQoSであった場合にも，ユーザを取り巻く環境やユーザの心理状態などに応じて，各ユーザが体感するサービスの品質は大きく変化する．この点に着目し，<strong>各ユーザが主観的に認識する品質を評価指標としたユーザ体感品質（<u>QoE：Quality of Experience</u>）</strong>が近年注目されている．当研究室では，実環境的な要因や心理的な要因などの様々な要因がQoEに与える影響等についての研究，QoEを考慮した通信制御を行うことでユーザがより快適に通信サービスを享受できるようにするための研究を行っている．</p>
+                <!-- <p><small>[2] ITU-T Rec. P.10/G.100 Amendment1, "New Appedix I-Definition of Quality of experience (QoE), " Jan. 2007.</small></p> -->
+                <img src="/img/qoe.png" alt="Economics" class="img-responsive img-responsive-overwrite">
+                <h4><p class="text-center">QoSとQoE</p></h4>
+              </div></div>
             </div>
           </div>
         </div>
-      </div>
+        <div class="col-sm-3 hidden-xs">
+          <div id="sidebar" data-spy="affix" data-offset-top="120" data-offset-bottom="0">
+            <ul class = "nav nav-pills nav-stacked hidden-xs">
+              <li><a class="2015" href="#economics"><strong>Economics team</strong></a></li>
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="#eco-pricing">　プライシング</a></li>
+                <li><a href="#eco-game-theory">　ゲーム理論</a></li>
+                <li><a href="#eco-user-beh">　ユーザ行動</a></li>
+                <li><a href="#eco-qoe">　ユーザ体感品質（QoE）</a></li>
+              </ul>
+              <li><a class="2014" href="#optical"><strong>Optical team</strong></a></li>
+              <li><a class="2013" href="#wireless"><strong>Wireless team</strong></a></li>
+              <ul class="nav nav-pills nav-stacked">
+                <li><a href="#wirel-">　アドホックネットワーク</a></li>
+                <li><a href="#wirel-">　車車間通信</a></li>
+                <li><a href="#wirel-">　Opportunistic Routing</a></li>
+                <!-- <li><a href="#wirel-">　セキュリティ</a></li> -->
+              </ul>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+          <h1><span id="optical"></span></h1><div class="panel panel-primary">
+            <div class="panel-heading text-center"><div class="panel-title">Optical team</div></div>
+            <div class="panel-body">内容</div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-9">
+          <h1><span id="wireless"></span></h1><div class="panel panel-primary">
+            <div class="panel-heading text-center"><div class="panel-title">Wireless team</div></div>
+            <div class="panel-body">内容</div>
+          </div>
+        </div>
+      </div></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br></br>
     </div>
   </body>
 </html>

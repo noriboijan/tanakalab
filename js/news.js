@@ -40,7 +40,7 @@ $(function(){
       for (var i = 0,j = 0; i < 300 && j < 5; i++){
         if(data_array[i].match(993300) && data_array[i].match(20)){
 //              console.log(data_array[i].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,''));
-          article += "<tr><td style=\"width: 120px\;vertical-align: top\;\">";
+          article += "<tr><td style=\"width: 140px\;vertical-align: top\;\">";
 //                article += data_array[i].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'');
           date_array = (data_array[i].replace(/<("[^"]*"|'[^']*'|[^'">])*>/g,'')).split(/年|月|日/);
           //console.log(date_array[0],date_array[1],date_array[2]);

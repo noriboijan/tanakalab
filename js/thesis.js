@@ -1,5 +1,5 @@
 $(function(){
-  $.get('/data/graduates.csv',function(data){
+  $.get('/data/thesis.csv',function(data){
     var csv = $.csv()(data);
     var punc = 0;
     var jpName = 0;
@@ -39,7 +39,13 @@ $(function(){
         first = true;
         list += '<h1><span id='+this[year]+'></span></h1>';
         list += '<div class="panel panel-primary">';
-        list += '<div class="panel-heading"><h3 class="panel-title">'+this[year]+'年度</h3></div>';
+        if(lang == 1)
+        {
+          list += '<div class="panel-heading"><h3 class="panel-title">'+this[year]+'</h3></div>';
+        }
+        else{
+          list += '<div class="panel-heading"><h3 class="panel-title">'+this[year]+'年度</h3></div>';
+        }
       }
       else if(this[punc] == "+"){
         if(first){
@@ -72,6 +78,6 @@ $(function(){
       }
     })
     list += '</table></div>'; // <div class="panel-body"><div class="panel">
-    $('#graduates').prepend(list);
+    $('#thesis').prepend(list);
   })
 })
