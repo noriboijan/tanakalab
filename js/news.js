@@ -28,7 +28,7 @@ $(function(){
 
 $(function(){
   $.ajax({
-    url:'/~tanaka/news.html',
+    url:'/news.html',
     success: function(data){
       var data_array = data.split(/\r\n|\r|\n/);
       var date_array;
