@@ -3,7 +3,7 @@ $(function(){
   var csv_array;
   var article;
   $.ajax({
-    url:'news.csv',
+    url:'/news.csv',
     success: function(data){
       csv_array = $.csv()(data);
       var article = '<table><tbody>';
