@@ -3,10 +3,10 @@
 山崎　託,Taku YAMAZAKI,Study on Packet Forwarding Mechanism by Narrowing Relay Range in Ad Hoc Networks,アドホックネットワークにおける中継範囲絞り込みパケット転送方式の研究,
 +,修士,Master,
 Wafa WERDA,Wafa WERDA,Cost Analysis and Pricing of Macro-Femto Hetetogeneous Networks,
-坂口友彬,Tomoaki SAKAGUCHI,アドホックネットワークにおける信頼性制御方式の提案と評価,
+坂口友彬,Tomoaki SAKAGUCHI,,アドホックネットワークにおける信頼性制御方式の提案と評価,
 +,学士,Bachelor,
-大江晴菜,,Haruna OE,Bluetooth Low Energyを用いた省電力DTNの構築法
-鹿島睦史,,Atsufumi KASHIMA,Opportunistic Routingにおける端末密度を利用した待機時間最適化
+大江晴菜,Haruna OHE,,Bluetooth Low Energyを用いた省電力DTNの構築法
+鹿島睦史,Atsufumi KASHIMA,,Opportunistic Routingにおける端末密度を利用した待機時間最適化
 君野雄哉,Kazuya KIMINO,,無線LANにおける送信機会逆オークションを用いたQoS向上手法
 須田達也,Tatsuya SUDA,,深層学習によるコンテンツ視聴数予測
 中澤　翼,Tsubasa NAKAZAWA,,無線LANにおける通信品質の可視化とユーザ行動分析
@@ -15,12 +15,12 @@ Wafa WERDA,Wafa WERDA,Cost Analysis and Pricing of Macro-Femto Hetetogeneous Net
 +,修士,Master,
 Saw David SAN,Saw David SAN,Study on Reliability Enhancement Scheme with End-to-End Retransmission for Delay Tolerant networks,
 +,学士,Bachelor,
-井上美穂,Miho INOUE,無線LAN環境における端末の種類とユーザ行動の関係
-亀田崚太,Ryota KAMEDA,Opportunistic Routingにおける位置推定を利用した中継端末選択手法
-施　承佑,Shosuke SHI,無線LANアクセスポイントにおけるQoE向上のための最適ユーザ誘導法
-谷口文隆,Fumitaka TANIGUCHI,OTTサービスにおけるCPとISPのコスト負担の最適化
-古殿洋平,Yohei FURUTONO,無線LANでのアプリケーションの違いとユーザ誘導の効果
-林　珊婷,LIN Shanting,協力モバイルデータオフロード市場分析
+井上美穂,Miho INOUE,,無線LAN環境における端末の種類とユーザ行動の関係
+亀田崚太,Ryota KAMEDA,,Opportunistic Routingにおける位置推定を利用した中継端末選択手法
+施　承佑,Shosuke SHI,,無線LANアクセスポイントにおけるQoE向上のための最適ユーザ誘導法
+谷口文隆,Fumitaka TANIGUCHI,,OTTサービスにおけるCPとISPのコスト負担の最適化
+古殿洋平,Yohei FURUTONO,,無線LANでのアプリケーションの違いとユーザ誘導の効果
+林　珊婷,LIN Shanting,,協力モバイルデータオフロード市場分析
 -,2014,,
 +,博士,Ph. D.,
 張　成,ZHANG Cheng,Study on Time Dependent Pricing for Internet Access under Different Market Structures,独占及び競争市場におけるインターネットアクセス時刻変動料金の研究,
